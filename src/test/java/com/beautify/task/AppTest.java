@@ -94,7 +94,7 @@ public class AppTest {
     };
 
 
-    private class Producer implements TaskBatchProducer {
+    public class Producer implements TaskBatchProducer {
         @Override
         public List<Task> produce() {
             Task task = new TestTask();

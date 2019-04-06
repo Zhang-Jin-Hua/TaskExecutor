@@ -93,7 +93,7 @@ public class TaskExecutor {
                         }
 
                         if (isEmpty(queue) && taskBatchProducer == null) {
-                            sleep(executorConfig.sleepInMills(), TimeUnit.MILLISECONDS);
+                            sleep(5, TimeUnit.MILLISECONDS);
                         }
 
                         if (isEmpty(queue) && taskBatchProducer != null) {
@@ -373,9 +373,9 @@ public class TaskExecutor {
                     throw new IllegalArgumentException("queue为null，请检查参数");
                 }
 
-                if (taskExecutor.taskBatchProducer == null) {
-                    throw new IllegalArgumentException("taskBatchProducer为null，请检查参数");
-                }
+//                if (taskExecutor.taskBatchProducer == null) {
+//                    throw new IllegalArgumentException("taskBatchProducer为null，请检查参数");
+//                }
 
                 if (isEmpty(taskExecutor.taskDesc)) {
                     throw new IllegalArgumentException("taskDesc为null，请检查参数");
